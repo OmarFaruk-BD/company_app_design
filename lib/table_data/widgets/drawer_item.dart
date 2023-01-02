@@ -8,7 +8,6 @@ class DrawerItem extends StatelessWidget {
     Key? key,
     this.name = 'Purchase',
     this.leadingIcon = Icons.shopping_cart,
-    this.trailingIcon = CupertinoIcons.chevron_down,
     this.onTap,
     this.isSelected = false,
   }) : super(key: key);
@@ -16,15 +15,14 @@ class DrawerItem extends StatelessWidget {
   final VoidCallback? onTap;
   final String name;
   final IconData leadingIcon;
-  final IconData trailingIcon;
   bool isSelected;
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 5),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 5),
+      child: InkWell(
+        onTap: onTap,
         child: Container(
           color: isSelected ? const Color(0xFFC9ECE3) : Colors.white,
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
@@ -50,7 +48,9 @@ class DrawerItem extends StatelessWidget {
               ),
               const Spacer(),
               Icon(
-                trailingIcon,
+                isSelected
+                    ? CupertinoIcons.chevron_up
+                    : CupertinoIcons.chevron_down,
                 color: isSelected
                     ? const Color(0xFF10AB83)
                     : Colors.black.withOpacity(0.6),

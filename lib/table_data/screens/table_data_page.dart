@@ -12,7 +12,7 @@ class TableDataPage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: _buildAppBar(),
       body: Container(),
-      drawer: const CustomDrawer(),
+      drawer:  CustomDrawer(),
     );
   }
 

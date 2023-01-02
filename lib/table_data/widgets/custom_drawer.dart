@@ -1,9 +1,18 @@
 import 'package:demo_limited_company_app/table_data/widgets/drawer_header.dart';
 import 'package:demo_limited_company_app/table_data/widgets/drawer_item.dart';
+import 'package:demo_limited_company_app/table_data/widgets/expanded_drawer_item.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CustomDrawer extends StatelessWidget {
+class CustomDrawer extends StatefulWidget {
   const CustomDrawer({super.key});
+
+  @override
+  State<CustomDrawer> createState() => _CustomDrawerState();
+}
+
+class _CustomDrawerState extends State<CustomDrawer> {
+  bool isPurchaseSelected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +24,24 @@ class CustomDrawer extends StatelessWidget {
             child: Column(
               children: [
                 const CustomDrawerHeader(),
-                DrawerItem(),
+                const SizedBox(height: 5),
+                ExpandedDrawerItemTile(),
+                DrawerItem(
+                  isSelected: isPurchaseSelected,
+                  onTap: () {
+                    setState(() {
+                      isPurchaseSelected = !isPurchaseSelected;
+                    });
+                  },
+                ),
+                DrawerItem(
+                  name: 'Sell',
+                  leadingIcon: CupertinoIcons.bag_fill,
+                ),
+                DrawerItem(
+                  name: 'Stock / Inventory',
+                  leadingIcon: CupertinoIcons.house,
+                ),
               ],
             )),
       ),
