@@ -3,6 +3,7 @@
 import 'package:demo_limited_company_app/drawer/widgets/custom_drawer.dart';
 import 'package:demo_limited_company_app/table_data/widgets/payment_table.dart';
 import 'package:demo_limited_company_app/table_data/widgets/purchase_table.dart';
+import 'package:demo_limited_company_app/table_data/widgets/return_table.dart';
 import 'package:flutter/material.dart';
 
 class TableDataPage extends StatelessWidget {
@@ -55,6 +56,7 @@ class TableDataPage extends StatelessWidget {
       children: [
         PurchaseTable(),
         PaymentTable(),
+        ReturnTable(),
       ],
     );
   }
