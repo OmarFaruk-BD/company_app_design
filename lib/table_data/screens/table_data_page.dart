@@ -1,11 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:demo_limited_company_app/drawer/widgets/custom_drawer.dart';
-import 'package:demo_limited_company_app/table_data/widgets/invoice_data.dart';
-import 'package:demo_limited_company_app/table_data/widgets/product_details.dart';
-import 'package:demo_limited_company_app/table_data/widgets/remaining_balance_widget.dart';
-import 'package:demo_limited_company_app/table_data/widgets/transaction_details_box.dart';
-import 'package:demo_limited_company_app/table_data/widgets/transaction_header.dart';
+import 'package:demo_limited_company_app/table_data/widgets/purchase_table.dart';
 import 'package:flutter/material.dart';
 
 class TableDataPage extends StatelessWidget {
@@ -52,102 +48,12 @@ class TableDataPage extends StatelessWidget {
   }
 
   Widget _buildBody() {
-    return Padding(
+    return ListView(
+      shrinkWrap: true,
       padding: const EdgeInsets.only(top: 12, left: 16, right: 16, bottom: 25),
-      child: Container(
-        decoration: BoxDecoration(
-          border: Border.all(color: const Color(0xFF10AB83)),
-          borderRadius: const BorderRadius.all(Radius.circular(2)),
-        ),
-        child: Row(
-          children: [
-            Expanded(
-              flex: 263,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TransactionHeader(
-                    transactionHeaderName: 'Purchase',
-                  ),
-                  InvoiceOrReturnBox(),
-                  Container(
-                    decoration: const BoxDecoration(
-                      border: Border(
-                        bottom: BorderSide(color: Color(0xFF10AB83)),
-                      ),
-                    ),
-                    child: Column(
-                      children: [
-                        ProductDetails(),
-                        ProductDetails(),
-                        ProductDetails(),
-                      ],
-                    ),
-                  ),
-                  TransactionDoubleItemBox(
-                    firstItemName: 'Discount',
-                    firstItemAmount: '0',
-                    secondItemName: 'VAT',
-                    secondItemAmount: '0',
-                  ),
-                  TransactionDoubleItemBox(
-                    firstItemName: 'Grand Total',
-                    firstItemAmount: '50000',
-                    secondItemName: 'Previous Due',
-                    secondItemAmount: '20000',
-                  ),
-                  TransactionDoubleItemBox(
-                    firstItemName: 'Total Amount',
-                    firstItemAmount: '70000',
-                    secondItemName: 'Total Payment',
-                    secondItemAmount: '40000',
-                  ),
-                  RemainingBalanceBox(),
-                ],
-              ),
-            ),
-            Expanded(
-              flex: 80,
-              child: Container(
-                // height: double.maxFinite,
-                width: double.maxFinite,
-                padding: const EdgeInsets.only(bottom: 10),
-                decoration: const BoxDecoration(
-                  border: Border(
-                    left: BorderSide(color: Color(0xFF10AB83)),
-                  ),
-                ),
-                child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: RichText(
-                    textAlign: TextAlign.center,
-                    text: const TextSpan(
-                      text: 'Due\n',
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                        height: 1.3,
-                      ),
-                      children: [
-                        TextSpan(
-                          text: '30000',
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Color(0xFFF37048),
-                            fontWeight: FontWeight.w600,
-                            height: 1.3,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+      children: [
+        PurchaseTable(),
+      ],
     );
   }
 }

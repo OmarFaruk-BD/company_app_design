@@ -20,6 +20,7 @@ class TransactionDoubleItemBox extends StatelessWidget {
       decoration: const BoxDecoration(
         border: Border(
           bottom: BorderSide(color: Color(0xFF10AB83)),
+          right: BorderSide(color: Color(0xFF10AB83)),
         ),
       ),
       child: Column(
