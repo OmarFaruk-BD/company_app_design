@@ -19,7 +19,6 @@ class TransactionDoubleItemBox extends StatelessWidget {
     return Container(
       decoration: const BoxDecoration(
         border: Border(
-          top: BorderSide(color: Color(0xFF10AB83)),
           bottom: BorderSide(color: Color(0xFF10AB83)),
         ),
       ),
@@ -46,16 +45,25 @@ class TransactionDoubleItemBox extends StatelessWidget {
                 height: 32,
                 width: 1,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 26, right: 15),
-                child: Text(
-                  firstItemAmount,
-                  style: const TextStyle(
-                    fontSize: 12,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w600,
-                    height: 1.8,
-                  ),
+              SizedBox(
+                width: 80,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 5),
+                      child: Text(
+                        firstItemAmount,
+                        style: const TextStyle(
+                          fontSize: 12,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w600,
+                          height: 1.8,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 26),
+                  ],
                 ),
               ),
             ],
@@ -64,7 +72,7 @@ class TransactionDoubleItemBox extends StatelessWidget {
             children: [
               const SizedBox(width: 15),
               Padding(
-                padding: const EdgeInsets.only(bottom: 5),
+                padding: const EdgeInsets.only(bottom: 7),
                 child: Text(
                   secondItemName,
                   style: const TextStyle(
@@ -81,16 +89,25 @@ class TransactionDoubleItemBox extends StatelessWidget {
                 height: 32,
                 width: 1,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 26, right: 15),
-                child: Text(
-                  secondItemAmount,
-                  style: const TextStyle(
-                    fontSize: 12,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w600,
-                    height: 1.8,
-                  ),
+              SizedBox(
+                width: 80,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 7),
+                      child: Text(
+                        secondItemAmount,
+                        style: const TextStyle(
+                          fontSize: 12,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w600,
+                          height: 1.8,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 26),
+                  ],
                 ),
               ),
             ],

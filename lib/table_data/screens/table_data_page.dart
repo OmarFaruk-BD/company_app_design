@@ -26,7 +26,7 @@ class TableDataPage extends StatelessWidget {
   AppBar _buildAppBar() {
     return AppBar(
       backgroundColor: const Color(0xFF10AB83),
-      bottomOpacity: 0,
+      elevation: 0,
       centerTitle: true,
       title: const Text(
         'Table Data',
@@ -67,14 +67,37 @@ class TableDataPage extends StatelessWidget {
                 children: [
                   TransactionHeader(),
                   InvoiceBox(),
-                  ProductDetails(),
-                  ProductDetails(),
-                  ProductDetails(),
+                  Container(
+                    decoration: const BoxDecoration(
+                      border: Border(
+                        bottom: BorderSide(color: Color(0xFF10AB83)),
+                      ),
+                    ),
+                    child: Column(
+                      children: [
+                        ProductDetails(),
+                        ProductDetails(),
+                        ProductDetails(),
+                      ],
+                    ),
+                  ),
                   TransactionDoubleItemBox(
                     firstItemName: 'Discount',
                     firstItemAmount: '0',
                     secondItemName: 'VAT',
                     secondItemAmount: '0',
+                  ),
+                  TransactionDoubleItemBox(
+                    firstItemName: 'Grand Total',
+                    firstItemAmount: '50000',
+                    secondItemName: 'Previous Due',
+                    secondItemAmount: '20000',
+                  ),
+                  TransactionDoubleItemBox(
+                    firstItemName: 'Total Amount',
+                    firstItemAmount: '70000',
+                    secondItemName: 'Total Payment',
+                    secondItemAmount: '40000',
                   ),
                 ],
               ),

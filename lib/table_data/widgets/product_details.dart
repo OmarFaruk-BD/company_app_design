@@ -3,7 +3,16 @@ import 'package:flutter/material.dart';
 class ProductDetails extends StatelessWidget {
   const ProductDetails({
     Key? key,
+    this.productName = 'Test product 01',
+    this.pcsCount = '200',
+    this.countNumber = '200',
+    this.amount = '40000',
   }) : super(key: key);
+
+  final String productName;
+  final String pcsCount;
+  final String countNumber;
+  final String amount;
 
   @override
   Widget build(BuildContext context) {
@@ -12,20 +21,20 @@ class ProductDetails extends StatelessWidget {
         const SizedBox(width: 15),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
+          children: [
             Text(
-              'Test product 01',
-              style: TextStyle(
+              productName,
+              style: const TextStyle(
                 fontSize: 12,
                 color: Colors.black,
                 fontWeight: FontWeight.w600,
                 height: 1.8,
               ),
             ),
-            SizedBox(width: 4),
+            const SizedBox(width: 4),
             Text(
-              '100 pcs x 50',
-              style: TextStyle(
+              '$pcsCount pcs x $countNumber',
+              style: const TextStyle(
                 fontSize: 12,
                 color: Colors.black,
                 fontWeight: FontWeight.w400,
@@ -40,19 +49,22 @@ class ProductDetails extends StatelessWidget {
           height: 55,
           width: 1,
         ),
-        const SizedBox(
+        SizedBox(
           width: 80,
-          child: Padding(
-            padding: EdgeInsets.only(left: 26),
-            child: Text(
-              '70000',
-              style: TextStyle(
-                fontSize: 12,
-                color: Colors.black,
-                fontWeight: FontWeight.w600,
-                height: 1.8,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text(
+                amount,
+                style: const TextStyle(
+                  fontSize: 12,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w600,
+                  height: 1.8,
+                ),
               ),
-            ),
+              const SizedBox(width: 26),
+            ],
           ),
         ),
       ],
