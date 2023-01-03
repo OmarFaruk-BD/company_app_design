@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:demo_limited_company_app/drawer/widgets/custom_drawer.dart';
+import 'package:demo_limited_company_app/table_data/widgets/payment_table.dart';
 import 'package:demo_limited_company_app/table_data/widgets/purchase_table.dart';
 import 'package:flutter/material.dart';
 
@@ -53,6 +54,7 @@ class TableDataPage extends StatelessWidget {
       padding: const EdgeInsets.only(top: 12, left: 16, right: 16, bottom: 25),
       children: [
         PurchaseTable(),
+        PaymentTable(),
       ],
     );
   }
