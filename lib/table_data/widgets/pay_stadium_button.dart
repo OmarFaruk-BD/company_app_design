@@ -21,27 +21,35 @@ class PayStadiumButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(10.67)),
-              ),
-              child: const Icon(
-                Icons.add,
-                color: Color(0xFF10AB83),
-              ),
-            ),
+            _buildIcon(),
             const SizedBox(width: 10),
-            const Text(
-              'Pay the balance',
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.white,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
+            _buildText(),
           ],
         ),
+      ),
+    );
+  }
+
+  Text _buildText() {
+    return const Text(
+      'Pay the balance',
+      style: TextStyle(
+        fontSize: 20,
+        color: Colors.white,
+        fontWeight: FontWeight.w600,
+      ),
+    );
+  }
+
+  Container _buildIcon() {
+    return Container(
+      decoration: const BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.all(Radius.circular(10.67)),
+      ),
+      child: const Icon(
+        Icons.add,
+        color: Color(0xFF10AB83),
       ),
     );
   }

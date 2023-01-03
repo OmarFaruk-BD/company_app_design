@@ -1,4 +1,4 @@
-import 'package:demo_limited_company_app/table_data/widgets/due_box.dart';
+import 'package:demo_limited_company_app/table_data/widgets/due_box_widget.dart';
 import 'package:demo_limited_company_app/table_data/widgets/transaction_header.dart';
 import 'package:flutter/material.dart';
 
@@ -31,45 +31,7 @@ class PreviousDueBoxWidget extends StatelessWidget {
                 const TransactionHeader(
                   transactionHeaderName: 'Dues',
                 ),
-                Container(
-                  decoration: const BoxDecoration(
-                    border: Border(
-                      top: BorderSide(color: Color(0xFF10AB83)),
-                      bottom: BorderSide(color: Color(0xFF10AB83)),
-                      right: BorderSide(color: Color(0xFF10AB83)),
-                    ),
-                  ),
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(top: 12, left: 15, bottom: 12),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            const Text(
-                              'Previous Due',
-                              style: TextStyle(
-                                fontSize: 14,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                            const SizedBox(width: 11),
-                            Text(
-                              date,
-                              style: const TextStyle(
-                                fontSize: 12,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                )
+                _buildPreviousDeoBox()
               ],
             ),
           ),
@@ -77,6 +39,47 @@ class PreviousDueBoxWidget extends StatelessWidget {
             amount: amount,
           ),
         ],
+      ),
+    );
+  }
+
+  Container _buildPreviousDeoBox() {
+    return Container(
+      decoration: const BoxDecoration(
+        border: Border(
+          top: BorderSide(color: Color(0xFF10AB83)),
+          bottom: BorderSide(color: Color(0xFF10AB83)),
+          right: BorderSide(color: Color(0xFF10AB83)),
+        ),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.only(top: 12, left: 15, bottom: 12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                const Text(
+                  'Previous Due',
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                const SizedBox(width: 11),
+                Text(
+                  date,
+                  style: const TextStyle(
+                    fontSize: 12,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

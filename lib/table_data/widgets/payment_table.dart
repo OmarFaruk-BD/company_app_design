@@ -1,5 +1,5 @@
-import 'package:demo_limited_company_app/table_data/widgets/due_box.dart';
-import 'package:demo_limited_company_app/table_data/widgets/invoice_data.dart';
+import 'package:demo_limited_company_app/table_data/widgets/due_box_widget.dart';
+import 'package:demo_limited_company_app/table_data/widgets/invoice_data_box.dart';
 import 'package:demo_limited_company_app/table_data/widgets/remaining_balance_widget.dart';
 import 'package:demo_limited_company_app/table_data/widgets/transaction_details_box.dart';
 import 'package:demo_limited_company_app/table_data/widgets/transaction_header.dart';
