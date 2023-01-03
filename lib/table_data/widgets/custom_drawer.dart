@@ -1,6 +1,6 @@
 import 'package:demo_limited_company_app/table_data/widgets/drawer_header.dart';
-import 'package:demo_limited_company_app/table_data/widgets/drawer_item.dart';
-import 'package:demo_limited_company_app/table_data/widgets/expanded_drawer_item.dart';
+import 'package:demo_limited_company_app/table_data/widgets/drawer_item_tile.dart';
+import 'package:demo_limited_company_app/table_data/widgets/expanded_items.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -25,22 +25,23 @@ class _CustomDrawerState extends State<CustomDrawer> {
               children: [
                 const CustomDrawerHeader(),
                 const SizedBox(height: 5),
-                const DrawerItemTile(),
-                DrawerItem(
-                  isSelected: isPurchaseSelected,
-                  onTap: () {
-                    setState(() {
-                      isPurchaseSelected = !isPurchaseSelected;
-                    });
-                  },
+                DrawerItemTile(
+                  name: 'Purchase',
+                  leadingIcon: Icons.shopping_cart,
+                  expantionWidget: const ExpandedItems(),
+                  onTap: () {},
                 ),
-                DrawerItem(
+                DrawerItemTile(
                   name: 'Sell',
                   leadingIcon: CupertinoIcons.bag_fill,
+                  //  expantionWidget: ,
+                  onTap: () {},
                 ),
-                DrawerItem(
+                DrawerItemTile(
                   name: 'Stock / Inventory',
                   leadingIcon: CupertinoIcons.house,
+                  //  expantionWidget: [],
+                  onTap: () {},
                 ),
               ],
             )),

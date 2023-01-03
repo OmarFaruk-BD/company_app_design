@@ -1,10 +1,18 @@
 import 'package:demo_limited_company_app/table_data/widgets/drawer_item.dart';
-import 'package:demo_limited_company_app/table_data/widgets/expanded_items.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DrawerItemTile extends StatefulWidget {
-  const DrawerItemTile({super.key});
+  const DrawerItemTile({
+    super.key,
+    this.name = 'Purchase',
+    this.leadingIcon = Icons.shopping_cart,
+    this.expantionWidget,
+    this.onTap,
+  });
+  final VoidCallback? onTap;
+  final String name;
+  final IconData leadingIcon;
+  final Widget? expantionWidget;
 
   @override
   State<DrawerItemTile> createState() => _DrawerItemTileState();
@@ -25,30 +33,25 @@ class _DrawerItemTileState extends State<DrawerItemTile> {
         child: ExpansionTile(
           backgroundColor: Colors.white,
           expandedAlignment: Alignment.centerLeft,
+          tilePadding: EdgeInsets.zero,
+          maintainState: false,
           onExpansionChanged: (value) {
             setState(() {
               isExpanded = value;
             });
           },
-          title: DrawerItem(isSelected: isExpanded),
-          trailing: Container(
-            height: 40,
-            color: isExpanded ? const Color(0xFFC9ECE3) : Colors.white,
-            child: Icon(
-              isExpanded
-                  ? CupertinoIcons.chevron_up
-                  : CupertinoIcons.chevron_down,
-              color: isExpanded
-                  ? const Color(0xFF10AB83)
-                  : Colors.black.withOpacity(0.6),
-              size: 16,
-            ),
+          title: DrawerItem(
+            name: widget.name,
+            leadingIcon: widget.leadingIcon,
+            isSelected: isExpanded,
+            // onTap: widget.onTap,
           ),
-          tilePadding: EdgeInsets.zero,
-          maintainState: true,
-          children: const [
-            ExpandedItems(),
-          ],
+          trailing: const SizedBox(),
+          children: widget.expantionWidget == null
+              ? []
+              : [
+                  widget.expantionWidget!,
+                ],
         ),
       ),
     );
