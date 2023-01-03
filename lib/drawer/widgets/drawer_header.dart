@@ -16,18 +16,65 @@ class CustomDrawerHeader extends StatelessWidget {
           bottomRight: Radius.circular(12),
         ),
       ),
-      child: Padding(
-        padding: const EdgeInsets.only(left: 15, bottom: 16, top: 22),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            _buildCrossButton(context),
-            const SizedBox(height: 40),
-            _buildHeaderText(),
-          ],
-        ),
+      child: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 15, bottom: 16, top: 22),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                _buildCrossButton(context),
+                const SizedBox(height: 40),
+                _buildHeaderText(),
+              ],
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomRight,
+            child: Container(
+              height: 115,
+              width: 147,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    const Color(0xFFC9ECE3).withOpacity(.1),
+                    const Color(0xFF10AB83),
+                    const Color(0xFF10AB83),
+                  ],
+                  begin: Alignment.centerLeft,
+                  end: Alignment.topRight,
+                ),
+                borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(80),
+                  bottomRight: Radius.circular(14),
+                ),
+              ),
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomRight,
+            child: Container(
+              height: 115,
+              width: 90,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    const Color(0xFFC9ECE3).withOpacity(.05),
+                    const Color(0xFF10AB83),
+                  ],
+                  begin: Alignment.bottomLeft,
+                  end: Alignment.topRight,
+                ),
+                borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(90),
+                  bottomRight: Radius.circular(14),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -39,7 +86,6 @@ class CustomDrawerHeader extends StatelessWidget {
         color: Colors.white,
         fontSize: 18,
         fontWeight: FontWeight.w600,
-        height: 2.2,
       ),
     );
   }
