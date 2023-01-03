@@ -55,7 +55,6 @@ class TableDataPage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 12, left: 16, right: 16, bottom: 25),
       child: Container(
-        width: 263,
         decoration: BoxDecoration(
           border: Border.all(color: const Color(0xFF10AB83)),
           borderRadius: const BorderRadius.all(Radius.circular(2)),
@@ -63,6 +62,7 @@ class TableDataPage extends StatelessWidget {
         child: Row(
           children: [
             Expanded(
+              flex: 263,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -105,7 +105,46 @@ class TableDataPage extends StatelessWidget {
                   RemainingBalanceBox(),
                 ],
               ),
-            )
+            ),
+            Expanded(
+              flex: 80,
+              child: Container(
+                // height: double.maxFinite,
+                width: double.maxFinite,
+                padding: const EdgeInsets.only(bottom: 10),
+                decoration: const BoxDecoration(
+                  border: Border(
+                    left: BorderSide(color: Color(0xFF10AB83)),
+                  ),
+                ),
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: RichText(
+                    textAlign: TextAlign.center,
+                    text: const TextSpan(
+                      text: 'Due\n',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        height: 1.3,
+                      ),
+                      children: [
+                        TextSpan(
+                          text: '30000',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Color(0xFFF37048),
+                            fontWeight: FontWeight.w600,
+                            height: 1.3,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),

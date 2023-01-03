@@ -30,7 +30,7 @@ class ProductDetails extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            const SizedBox(width: 4),
+            const SizedBox(height: 4),
             Text(
               '$pcsCount pcs x $countNumber',
               style: const TextStyle(
@@ -58,7 +58,7 @@ class ProductDetails extends StatelessWidget {
                   fontSize: 12,
                   color: Colors.black,
                   fontWeight: FontWeight.w600,
-                  ),
+                ),
               ),
               const SizedBox(width: 26),
             ],
