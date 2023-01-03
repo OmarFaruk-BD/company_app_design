@@ -1,6 +1,6 @@
-import 'package:demo_limited_company_app/table_data/widgets/drawer_header.dart';
-import 'package:demo_limited_company_app/table_data/widgets/drawer_item_tile.dart';
-import 'package:demo_limited_company_app/table_data/widgets/expanded_items.dart';
+import 'package:demo_limited_company_app/drawer/widgets/drawer_header.dart';
+import 'package:demo_limited_company_app/drawer/widgets/drawer_item_tile.dart';
+import 'package:demo_limited_company_app/drawer/widgets/expanded_items.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

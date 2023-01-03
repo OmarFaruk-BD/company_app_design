@@ -1,4 +1,4 @@
-import 'package:demo_limited_company_app/table_data/widgets/drawer_item.dart';
+import 'package:demo_limited_company_app/drawer/widgets/drawer_item.dart';
 import 'package:flutter/material.dart';
 
 class DrawerItemTile extends StatefulWidget {
