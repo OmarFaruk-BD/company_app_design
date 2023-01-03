@@ -12,6 +12,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        drawerTheme: DrawerThemeData(
+          scrimColor: const Color(0xFF10AB83).withOpacity(.5),
+        ),
+      ),
       home: TableDataPage(),
     );
   }

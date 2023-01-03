@@ -31,49 +31,8 @@ class CustomDrawerHeader extends StatelessWidget {
               ],
             ),
           ),
-          Align(
-            alignment: Alignment.bottomRight,
-            child: Container(
-              height: 115,
-              width: 147,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    const Color(0xFFC9ECE3).withOpacity(.1),
-                    const Color(0xFF10AB83),
-                    const Color(0xFF10AB83),
-                  ],
-                  begin: Alignment.centerLeft,
-                  end: Alignment.topRight,
-                ),
-                borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(80),
-                  bottomRight: Radius.circular(14),
-                ),
-              ),
-            ),
-          ),
-          Align(
-            alignment: Alignment.bottomRight,
-            child: Container(
-              height: 115,
-              width: 90,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    const Color(0xFFC9ECE3).withOpacity(.05),
-                    const Color(0xFF10AB83),
-                  ],
-                  begin: Alignment.bottomLeft,
-                  end: Alignment.topRight,
-                ),
-                borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(90),
-                  bottomRight: Radius.circular(14),
-                ),
-              ),
-            ),
-          ),
+          _buildGradientContainer1(),
+          _buildGradientContainer2(),
         ],
       ),
     );
@@ -104,6 +63,54 @@ class CustomDrawerHeader extends StatelessWidget {
           fontWeight: FontWeight.w700,
           fontFamily: Icons.close.fontFamily,
           package: Icons.close.fontPackage,
+        ),
+      ),
+    );
+  }
+
+  Align _buildGradientContainer2() {
+    return Align(
+      alignment: Alignment.bottomRight,
+      child: Container(
+        height: 115,
+        width: 90,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              const Color(0xFFC9ECE3).withOpacity(0.15),
+              const Color(0xFF10AB83).withOpacity(0.15),
+            ],
+            begin: Alignment.bottomLeft,
+            end: Alignment.topRight,
+          ),
+          borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(90),
+            bottomRight: Radius.circular(14),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Align _buildGradientContainer1() {
+    return Align(
+      alignment: Alignment.bottomRight,
+      child: Container(
+        height: 115,
+        width: 147,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              const Color(0xFFC9ECE3).withOpacity(.07),
+              const Color(0xFF10AB83).withOpacity(.66),
+            ],
+            begin: Alignment.centerLeft,
+            end: Alignment.topRight,
+          ),
+          borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(80),
+            bottomRight: Radius.circular(14),
+          ),
         ),
       ),
     );
