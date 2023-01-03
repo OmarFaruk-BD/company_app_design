@@ -11,9 +11,9 @@ class RemainingBalanceBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         border: Border(
-          right: BorderSide(color: Color(0xFF10AB83)),
+          right: BorderSide(color: const Color(0xFF10AB83).withOpacity(.5)),
         ),
       ),
       child: Row(
@@ -29,7 +29,7 @@ class RemainingBalanceBox extends StatelessWidget {
           ),
           const Spacer(),
           Container(
-            color: Colors.green,
+            color: const Color(0xFF10AB83).withOpacity(.5),
             height: 38,
             width: 1,
           ),

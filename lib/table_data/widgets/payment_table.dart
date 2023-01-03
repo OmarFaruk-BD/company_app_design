@@ -14,7 +14,7 @@ class PaymentTable extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: const Color(0xFF10AB83)),
+        border: Border.all(color: const Color(0xFF10AB83).withOpacity(.5)),
         borderRadius: const BorderRadius.all(Radius.circular(2)),
       ),
       child: Row(

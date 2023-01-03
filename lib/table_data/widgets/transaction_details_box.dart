@@ -17,10 +17,10 @@ class TransactionDoubleItemBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         border: Border(
-          bottom: BorderSide(color: Color(0xFF10AB83)),
-          right: BorderSide(color: Color(0xFF10AB83)),
+          bottom: BorderSide(color: const Color(0xFF10AB83).withOpacity(.3)),
+          right: BorderSide(color: const Color(0xFF10AB83).withOpacity(.3)),
         ),
       ),
       child: Column(
@@ -42,7 +42,7 @@ class TransactionDoubleItemBox extends StatelessWidget {
               ),
               const Spacer(),
               Container(
-                color: Colors.green,
+                color: const Color(0xFF10AB83).withOpacity(.3),
                 height: 32,
                 width: 1,
               ),
@@ -86,7 +86,7 @@ class TransactionDoubleItemBox extends StatelessWidget {
               ),
               const Spacer(),
               Container(
-                color: Colors.green,
+                color: const Color(0xFF10AB83).withOpacity(.3),
                 height: 32,
                 width: 1,
               ),

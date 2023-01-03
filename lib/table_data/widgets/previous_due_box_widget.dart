@@ -16,7 +16,7 @@ class PreviousDueBoxWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: const Color(0xFF10AB83)),
+        border: Border.all(color: const Color(0xFF10AB83).withOpacity(.5)),
         borderRadius: const BorderRadius.all(Radius.circular(2)),
       ),
       child: Row(
@@ -45,11 +45,11 @@ class PreviousDueBoxWidget extends StatelessWidget {
 
   Container _buildPreviousDeoBox() {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         border: Border(
-          top: BorderSide(color: Color(0xFF10AB83)),
-          bottom: BorderSide(color: Color(0xFF10AB83)),
-          right: BorderSide(color: Color(0xFF10AB83)),
+          top: BorderSide(color: const Color(0xFF10AB83).withOpacity(.5)),
+          bottom: BorderSide(color: const Color(0xFF10AB83).withOpacity(.5)),
+          right: BorderSide(color: const Color(0xFF10AB83).withOpacity(.5)),
         ),
       ),
       child: Padding(

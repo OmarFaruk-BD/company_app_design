@@ -43,7 +43,7 @@ class ProductDetails extends StatelessWidget {
         ),
         const Spacer(),
         Container(
-          color: Colors.green,
+          color: const Color(0xFF10AB83).withOpacity(.5),
           height: 55,
           width: 1,
         ),

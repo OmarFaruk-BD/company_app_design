@@ -15,7 +15,7 @@ class ReturnTable extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: const Color(0xFF10AB83)),
+        border: Border.all(color: const Color(0xFF10AB83).withOpacity(.5)),
         borderRadius: const BorderRadius.all(Radius.circular(2)),
       ),
       child: Row(
@@ -35,16 +35,18 @@ class ReturnTable extends StatelessWidget {
                   invoiceOrReturnNo: '5386328',
                   isInvoiceBox: true,
                 ),
-                 InvoiceOrReturnBox(
+                InvoiceOrReturnBox(
                   date: '01 January 2022',
                   invoiceOrReturnNo: '5386328',
                   isInvoiceBox: false,
                 ),
                 Container(
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     border: Border(
-                      bottom: BorderSide(color: Color(0xFF10AB83)),
-                      right: BorderSide(color: Color(0xFF10AB83)),
+                      bottom: BorderSide(
+                          color: const Color(0xFF10AB83).withOpacity(.3)),
+                      right: BorderSide(
+                          color: const Color(0xFF10AB83).withOpacity(.3)),
                     ),
                   ),
                   child: Column(
