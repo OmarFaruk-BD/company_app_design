@@ -1,15 +1,16 @@
 import 'package:demo_limited_company_app/table_data/widgets/drawer_item.dart';
+import 'package:demo_limited_company_app/table_data/widgets/expanded_items.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ExpandedDrawerItemTile extends StatefulWidget {
-  const ExpandedDrawerItemTile({super.key});
+class DrawerItemTile extends StatefulWidget {
+  const DrawerItemTile({super.key});
 
   @override
-  State<ExpandedDrawerItemTile> createState() => _ExpandedDrawerItemTileState();
+  State<DrawerItemTile> createState() => _DrawerItemTileState();
 }
 
-class _ExpandedDrawerItemTileState extends State<ExpandedDrawerItemTile> {
+class _DrawerItemTileState extends State<DrawerItemTile> {
   bool isExpanded = false;
   @override
   Widget build(BuildContext context) {
@@ -23,6 +24,7 @@ class _ExpandedDrawerItemTileState extends State<ExpandedDrawerItemTile> {
         data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
         child: ExpansionTile(
           backgroundColor: Colors.white,
+          expandedAlignment: Alignment.centerLeft,
           onExpansionChanged: (value) {
             setState(() {
               isExpanded = value;
@@ -45,12 +47,7 @@ class _ExpandedDrawerItemTileState extends State<ExpandedDrawerItemTile> {
           tilePadding: EdgeInsets.zero,
           maintainState: true,
           children: const [
-            ListTile(
-              title: Text(
-                'items.description',
-                style: TextStyle(fontWeight: FontWeight.w700),
-              ),
-            )
+            ExpandedItems(),
           ],
         ),
       ),

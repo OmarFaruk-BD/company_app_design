@@ -25,7 +25,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
               children: [
                 const CustomDrawerHeader(),
                 const SizedBox(height: 5),
-                ExpandedDrawerItemTile(),
+                const DrawerItemTile(),
                 DrawerItem(
                   isSelected: isPurchaseSelected,
                   onTap: () {
