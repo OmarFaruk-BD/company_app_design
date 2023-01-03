@@ -25,7 +25,7 @@ class DueBoxWidget extends StatelessWidget {
           ),
           children: [
             TextSpan(
-              text: amount,
+              text: '\u09F3 $amount',
               style: const TextStyle(
                 fontSize: 12,
                 color: Color(0xFFF37048),

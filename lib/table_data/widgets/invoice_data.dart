@@ -19,7 +19,6 @@ class InvoiceOrReturnBox extends StatelessWidget {
     return Container(
       decoration: const BoxDecoration(
         border: Border(
-          top: BorderSide(color: Color(0xFF10AB83)),
           bottom: BorderSide(color: Color(0xFF10AB83)),
           right: BorderSide(color: Color(0xFF10AB83)),
         ),
@@ -61,7 +60,7 @@ class InvoiceOrReturnBox extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                const SizedBox(width: 11),
+                const SizedBox(width: 15),
                 Text(
                   invoiceOrReturnNo,
                   style: const TextStyle(

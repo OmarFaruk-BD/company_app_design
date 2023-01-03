@@ -53,11 +53,11 @@ class ProductDetails extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Text(
-                amount,
+                '\u09F3 $amount',
                 style: const TextStyle(
                   fontSize: 12,
                   color: Colors.black,
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
               const SizedBox(width: 26),

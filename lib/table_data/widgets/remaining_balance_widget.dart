@@ -39,7 +39,7 @@ class RemainingBalanceBox extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Text(
-                  amount,
+                  '\u09F3 $amount',
                   style: const TextStyle(
                     fontSize: 12,
                     color: Colors.black,

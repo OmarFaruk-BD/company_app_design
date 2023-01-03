@@ -35,6 +35,11 @@ class ReturnTable extends StatelessWidget {
                   invoiceOrReturnNo: '5386328',
                   isInvoiceBox: true,
                 ),
+                 InvoiceOrReturnBox(
+                  date: '01 January 2022',
+                  invoiceOrReturnNo: '5386328',
+                  isInvoiceBox: false,
+                ),
                 Container(
                   decoration: const BoxDecoration(
                     border: Border(

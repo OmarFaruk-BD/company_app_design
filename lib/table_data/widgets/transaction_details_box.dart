@@ -54,7 +54,7 @@ class TransactionDoubleItemBox extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(top: 5),
                       child: Text(
-                        firstItemAmount,
+                        '\u09F3 $firstItemAmount',
                         style: const TextStyle(
                           fontSize: 12,
                           color: Colors.black,
@@ -98,7 +98,7 @@ class TransactionDoubleItemBox extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 7),
                       child: Text(
-                        secondItemAmount,
+                        '\u09F3 $secondItemAmount',
                         style: const TextStyle(
                           fontSize: 12,
                           color: Colors.black,

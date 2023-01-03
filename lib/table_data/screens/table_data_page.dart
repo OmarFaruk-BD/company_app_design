@@ -37,8 +37,8 @@ class TableDataPage extends StatelessWidget {
       ),
       leading: IconButton(
         icon: const Icon(
-          Icons.menu_open_rounded,
-          size: 15,
+          Icons.menu,
+          size: 20,
           color: Colors.white,
         ),
         onPressed: () {
