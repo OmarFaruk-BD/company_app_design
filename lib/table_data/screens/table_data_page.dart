@@ -3,6 +3,7 @@
 import 'package:demo_limited_company_app/drawer/widgets/custom_drawer.dart';
 import 'package:demo_limited_company_app/table_data/widgets/invoice_data.dart';
 import 'package:demo_limited_company_app/table_data/widgets/product_details.dart';
+import 'package:demo_limited_company_app/table_data/widgets/remaining_balance_widget.dart';
 import 'package:demo_limited_company_app/table_data/widgets/transaction_details_box.dart';
 import 'package:demo_limited_company_app/table_data/widgets/transaction_header.dart';
 import 'package:flutter/material.dart';
@@ -65,8 +66,10 @@ class TableDataPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TransactionHeader(),
-                  InvoiceBox(),
+                  TransactionHeader(
+                    transactionHeaderName: 'Purchase',
+                  ),
+                  InvoiceOrReturnBox(),
                   Container(
                     decoration: const BoxDecoration(
                       border: Border(
@@ -99,6 +102,7 @@ class TableDataPage extends StatelessWidget {
                     secondItemName: 'Total Payment',
                     secondItemAmount: '40000',
                   ),
+                  RemainingBalanceBox(),
                 ],
               ),
             )
