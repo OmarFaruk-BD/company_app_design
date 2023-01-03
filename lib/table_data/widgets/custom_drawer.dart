@@ -22,26 +22,21 @@ class _CustomDrawerState extends State<CustomDrawer> {
         child: Drawer(
             backgroundColor: Colors.white,
             child: Column(
-              children: [
-                const CustomDrawerHeader(),
-                const SizedBox(height: 5),
+              children: const [
+                CustomDrawerHeader(),
+                SizedBox(height: 5),
                 DrawerItemTile(
                   name: 'Purchase',
                   leadingIcon: Icons.shopping_cart,
-                  expantionWidget: const ExpandedItems(),
-                  onTap: () {},
+                  expantionWidget: ExpandedItems(),
                 ),
                 DrawerItemTile(
                   name: 'Sell',
                   leadingIcon: CupertinoIcons.bag_fill,
-                  //  expantionWidget: ,
-                  onTap: () {},
                 ),
                 DrawerItemTile(
                   name: 'Stock / Inventory',
                   leadingIcon: CupertinoIcons.house,
-                  //  expantionWidget: [],
-                  onTap: () {},
                 ),
               ],
             )),

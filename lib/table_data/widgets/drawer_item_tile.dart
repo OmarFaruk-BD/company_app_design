@@ -7,9 +7,8 @@ class DrawerItemTile extends StatefulWidget {
     this.name = 'Purchase',
     this.leadingIcon = Icons.shopping_cart,
     this.expantionWidget,
-    this.onTap,
   });
-  final VoidCallback? onTap;
+  
   final String name;
   final IconData leadingIcon;
   final Widget? expantionWidget;
@@ -44,7 +43,6 @@ class _DrawerItemTileState extends State<DrawerItemTile> {
             name: widget.name,
             leadingIcon: widget.leadingIcon,
             isSelected: isExpanded,
-            // onTap: widget.onTap,
           ),
           trailing: const SizedBox(),
           children: widget.expantionWidget == null
