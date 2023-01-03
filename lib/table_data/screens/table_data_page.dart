@@ -1,6 +1,6 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:demo_limited_company_app/drawer/widgets/custom_drawer.dart';
+import 'package:demo_limited_company_app/table_data/widgets/pay_stadium_button.dart';
+import 'package:demo_limited_company_app/table_data/widgets/previous_due_box_widget.dart';
 import 'package:demo_limited_company_app/table_data/widgets/payment_table.dart';
 import 'package:demo_limited_company_app/table_data/widgets/purchase_table.dart';
 import 'package:demo_limited_company_app/table_data/widgets/return_table.dart';
@@ -15,7 +15,6 @@ class TableDataPage extends StatelessWidget {
     return Scaffold(
       key: _key,
       backgroundColor: Colors.white,
-      //   backgroundColor: const Color(0xFFC9ECE3),
       appBar: _buildAppBar(),
       body: _buildBody(),
       drawer: const CustomDrawer(),
@@ -52,11 +51,14 @@ class TableDataPage extends StatelessWidget {
   Widget _buildBody() {
     return ListView(
       shrinkWrap: true,
-      padding: const EdgeInsets.only(top: 12, left: 16, right: 16, bottom: 25),
-      children: [
+      padding: const EdgeInsets.only(top: 12, left: 16, right: 16, bottom: 68),
+      children: const [
+        PreviousDueBoxWidget(),
         PurchaseTable(),
         PaymentTable(),
         ReturnTable(),
+        SizedBox(height: 25),
+        PayStadiumButton(),
       ],
     );
   }
