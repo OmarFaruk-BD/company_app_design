@@ -40,15 +40,18 @@ class ProductDetails extends StatelessWidget {
           height: 55,
           width: 1,
         ),
-        const Padding(
-          padding: EdgeInsets.only(left: 26, right: 15),
-          child: Text(
-            '70000',
-            style: TextStyle(
-              fontSize: 12,
-              color: Colors.black,
-              fontWeight: FontWeight.w600,
-              height: 1.8,
+        const SizedBox(
+          width: 80,
+          child: Padding(
+            padding: EdgeInsets.only(left: 26),
+            child: Text(
+              '70000',
+              style: TextStyle(
+                fontSize: 12,
+                color: Colors.black,
+                fontWeight: FontWeight.w600,
+                height: 1.8,
+              ),
             ),
           ),
         ),

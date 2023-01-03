@@ -3,6 +3,7 @@
 import 'package:demo_limited_company_app/drawer/widgets/custom_drawer.dart';
 import 'package:demo_limited_company_app/table_data/widgets/invoice_data.dart';
 import 'package:demo_limited_company_app/table_data/widgets/product_details.dart';
+import 'package:demo_limited_company_app/table_data/widgets/transaction_details_box.dart';
 import 'package:demo_limited_company_app/table_data/widgets/transaction_header.dart';
 import 'package:flutter/material.dart';
 
@@ -69,7 +70,12 @@ class TableDataPage extends StatelessWidget {
                   ProductDetails(),
                   ProductDetails(),
                   ProductDetails(),
-                  
+                  TransactionDoubleItemBox(
+                    firstItemName: 'Discount',
+                    firstItemAmount: '0',
+                    secondItemName: 'VAT',
+                    secondItemAmount: '0',
+                  ),
                 ],
               ),
             )
