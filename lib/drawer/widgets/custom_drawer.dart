@@ -36,7 +36,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 ),
                 DrawerItemTile(
                   name: 'Stock / Inventory',
-                  leadingIcon: CupertinoIcons.house,
+                  leadingIcon: CupertinoIcons.home,
                 ),
               ],
             )),
